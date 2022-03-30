@@ -1,0 +1,24 @@
+$baseUrlCloudinary: "https://res.cloudinary.com/hnhnaig2j/image/upload/";
+
+.v-application {
+  background-color: var(--v-background-base) !important;
+}
+
+body::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+body::-webkit-scrollbar-thumb {
+  width: 0px !important;
+}
+
+body {
+  // overflow: hidden;
+  scrollbar-width: none;
+}
+
+//SWEET ALERT
+.swal2-modal {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700 !important;
+}
