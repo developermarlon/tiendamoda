@@ -125,8 +125,8 @@ export default {
       background_color: '#ec618d'
     },
     icon: {
-      source: `https://res.cloudinary.com/hnhnaig2j/image/upload/v1648594562/tiendamoda/icon_aficdj.png`,
-      filename: 'icon_aficdj.png'
+      source: `static/icon.png`,
+      filename: 'icon.png'
     }
   },
   vuetify: {
