@@ -3,11 +3,14 @@
         v-btn#goBack(@click="$router.go(-1)" color="important"  aria-label="menu" name="menu" rounded small fab dark).ml-2.elevation-0.text-capitalize.font-family-raleway-bold.mr-2 
             v-icon fas fa-angle-left
         v-container#container-products.d-flex.flex-wrap.justify-center
-            v-card(v-for="(product, key) in filterProducts" :key="key" class="flexcard ma-4 elevation-0" width="250" height="auto")
-                v-img(v-if="product.images" :src="`https://v3.tissini.app${product.images[0].url}`" :alt="product.name" width="100%" height="auto")
+            v-card(v-for="(product, key) in filterProducts" :key="key" class="flexcard ma-3 elevation-0" :width="$vuetify.breakpoint.smAndUp ? 250 : 140" :alt="product.name" height="auto")
+                v-img(v-if="product.images" :src="`https://v3.tissini.app${product.images[0].url}`" width="100%" height="auto")
+                    template(v-slot:placeholder)
+                        v-row(class="fill-height ma-0" align="center" justify="center")
+                            v-progress-circular( indeterminate color="important")
                 div.pa-4
-                    h3.text-center.text-uppercase {{product.name}}
-                    p.mb-0.text-body-1.secondary--text {{product.category}}
+                    h3.text-caption.text-sm-h6.text-center.text-uppercase.font-family-raleway-bold {{product.name}}
+                    p.mb-0.text-caption.text-sm-body-1.secondary--text {{product.category}}
                     h4.mt-0.text-h5.important--text.font-family-raleway-bold {{product.price}}
 
 </template>
@@ -101,5 +104,6 @@ export default {
         position: absolute;
         top: 10px;
         left: 10px;
+        z-index: 10;
     }
 </style>

@@ -128,7 +128,7 @@ $background: $baseUrlCloudinary+"/e_saturation:20/v1648596652/tiendamoda/home/lo
 
 #general-container-login {
   background: url($background);
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   height: 100vh;
 
